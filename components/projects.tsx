@@ -22,6 +22,8 @@ export function Projects() {
         'Role-based access control & dashboards',
         'Containerized microservices architecture',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
       featured: true,
     },
     {
@@ -34,6 +36,8 @@ export function Projects() {
         'Asynchronous event processing',
         'Rating-based filtering algorithm',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
     },
     {
       title: 'JournalApp',
@@ -45,6 +49,8 @@ export function Projects() {
         'Modular service architecture',
         'Real-time data sync',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
     },
     {
       title: 'Book Store API',
@@ -56,6 +62,8 @@ export function Projects() {
         'Scalable REST architecture',
         'Transaction management',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
     },
     {
       title: 'Express Book',
@@ -67,6 +75,8 @@ export function Projects() {
         'Database connection pooling',
         'Concurrent user support',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
     },
     {
       title: 'Hire Hub',
@@ -78,6 +88,8 @@ export function Projects() {
         'Booking management system',
         'Payment integration ready',
       ],
+      github: 'https://github.com/aryanraj',
+      liveLink: '#',
     },
   ]
 
@@ -185,14 +197,24 @@ export function Projects() {
                   </div>
 
                   <div className="flex gap-3 pt-4 border-t border-white/10">
-                    <button className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-400/30 transition-colors flex items-center justify-center gap-2">
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-400/30 transition-colors flex items-center justify-center gap-2"
+                    >
                       <ExternalLink size={16} />
                       Live
-                    </button>
-                    <button className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-400/30 transition-colors flex items-center justify-center gap-2">
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-400/30 transition-colors flex items-center justify-center gap-2"
+                    >
                       <Github size={16} />
                       Code
-                    </button>
+                    </a>
                   </div>
                 </div>
               </SpotlightCard>

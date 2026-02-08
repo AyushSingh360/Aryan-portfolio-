@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { Hyperspeed } from './ui/hyperspeed'
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -147,17 +147,8 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll to explore</span>
-          <ChevronDown className="w-5 h-5 text-cyan-400" />
-        </div>
-      </motion.div>
+      {/* Hyperspeed background */}
+      <Hyperspeed speed={0.02} direction="forward" />
     </section>
   )
 }
