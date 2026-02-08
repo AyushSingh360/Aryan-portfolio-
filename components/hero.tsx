@@ -108,10 +108,10 @@ export function Hero() {
           variants={itemVariants}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-balance"
         >
-          <span className="text-white">Engineering Scalable</span>
+          <span className="text-white">Hi, I'm Aryan Raj</span>
           <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500">
-            Backend Systems
+            Backend Engineer
           </span>
         </motion.h1>
 
@@ -120,7 +120,7 @@ export function Hero() {
           variants={itemVariants}
           className="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto font-light"
         >
-          Spring Boot • Microservices • Distributed Systems • Secure APIs
+          Building production-grade microservices with Java, Spring Boot, and cloud technologies. Specialized in event-driven architectures and scalable distributed systems.
         </motion.p>
 
         {/* CTA Buttons */}

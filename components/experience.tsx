@@ -10,38 +10,38 @@ export function Experience() {
 
   const timeline = [
     {
-      year: '2023 - Present',
-      role: 'Senior Backend Engineer',
-      company: 'TechCorp Solutions',
+      year: 'Present',
+      role: 'Backend Engineer & Open Source Contributor',
+      company: 'Community & Personal Projects',
       description:
-        'Leading microservices architecture design and implementation. Architected Kafka-based event streaming system handling 1M+ events/day.',
+        'Actively building and maintaining open-source projects. Contributing to backend ecosystem with focus on scalable architectures, microservices patterns, and educational content.',
       achievements: [
-        'Designed and deployed 5+ microservices reducing latency by 40%',
-        'Implemented Redis caching strategy improving throughput 3x',
-        'Established code review standards and best practices',
+        'Developed QuickClinic - Full-stack hospital management system with Kafka-based notifications',
+        'Built LocalConnect - Location-based service marketplace with Redis caching and advanced filtering',
+        'Created multiple Spring Boot microservices with production-grade security and architecture',
       ],
     },
     {
-      year: '2022 - 2023',
-      role: 'Backend Engineer',
-      company: 'Digital Innovations Inc',
+      year: 'Technical Focus',
+      role: 'Microservices & Distributed Systems',
+      company: 'Expertise Development',
       description:
-        'Developed Spring Boot applications and maintained critical production systems. Implemented secure API authentication and authorization.',
+        'Deep specialization in building event-driven architectures and microservices using Spring Boot, Kafka, and cloud technologies.',
       achievements: [
-        'Built healthcare management suite with 10+ microservices',
-        'Implemented JWT-based authentication system',
-        'Reduced API response time by 50% through optimization',
+        'Event-driven architecture with Apache Kafka for asynchronous processing',
+        'Microservices design patterns and inter-service communication',
+        'Secure authentication systems with JWT and Spring Security',
       ],
     },
     {
-      year: '2021 - 2022',
-      role: 'Junior Backend Developer',
-      company: 'StartUp Ventures',
-      description: 'Started career building REST APIs and database-driven applications using Spring Boot and MySQL.',
+      year: 'Core Skills',
+      role: 'Backend Development Stack',
+      company: 'Java & Spring Ecosystem',
+      description: 'Proficient in building production-grade backend systems with a focus on code quality, security, and scalability.',
       achievements: [
-        'Developed 15+ REST endpoints for e-commerce platform',
-        'Optimized database queries reducing load by 35%',
-        'Implemented transaction management for payment systems',
+        'Java 8+ with Spring Boot, Spring Data, and Spring Security',
+        'Database design and optimization with MySQL and MongoDB',
+        'DevOps fundamentals: Docker, deployment pipelines, and cloud architecture',
       ],
     },
   ]

@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import { LogoLoop } from './ui/logo-loop'
+import { Save as Java, Leaf, Shield, AlertCircle, Zap, Database, Box, Heart as React, Key, GitBranch, Github, Server } from 'lucide-react'
 
 export function TechStack() {
   const ref = useRef(null)
@@ -10,18 +12,18 @@ export function TechStack() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const technologies = [
-    { name: 'Java', icon: '☕' },
-    { name: 'Spring Boot', icon: '🌱' },
-    { name: 'Spring Security', icon: '🔒' },
-    { name: 'Kafka', icon: '📨' },
-    { name: 'Redis', icon: '⚡' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'MySQL', icon: '🗄️' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'JWT', icon: '🔑' },
-    { name: 'Git', icon: '📚' },
-    { name: 'GitHub', icon: '🐙' },
+    { name: 'Java', icon: <Java className="w-8 h-8" /> },
+    { name: 'Spring Boot', icon: <Leaf className="w-8 h-8" /> },
+    { name: 'Spring Security', icon: <Shield className="w-8 h-8" /> },
+    { name: 'Kafka', icon: <AlertCircle className="w-8 h-8" /> },
+    { name: 'Redis', icon: <Zap className="w-8 h-8" /> },
+    { name: 'MongoDB', icon: <Database className="w-8 h-8" /> },
+    { name: 'MySQL', icon: <Database className="w-8 h-8" /> },
+    { name: 'Docker', icon: <Box className="w-8 h-8" /> },
+    { name: 'React', icon: <React className="w-8 h-8" /> },
+    { name: 'JWT', icon: <Key className="w-8 h-8" /> },
+    { name: 'Git', icon: <GitBranch className="w-8 h-8" /> },
+    { name: 'GitHub', icon: <Github className="w-8 h-8" /> },
   ]
 
   const containerVariants = {
@@ -71,66 +73,14 @@ export function TechStack() {
           </motion.p>
         </motion.div>
 
-        {/* Infinite Scroll Container */}
+        {/* Logo Loop Component */}
         <motion.div
-          className="relative overflow-hidden rounded-lg glass p-8"
           variants={itemVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
+          className="relative"
         >
-          {/* Gradient overlays for smooth edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
-          {/* Scrolling track */}
-          <div className="overflow-hidden">
-            <motion.div
-              className="flex gap-8 min-w-max"
-              animate={{ x: [-1000, 0] }}
-              transition={{
-                duration: 30,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-              onHoverStart={(e) => {
-                if (e instanceof MouseEvent) {
-                  ;(e.target as HTMLElement).parentElement?.style.setProperty('animation-play-state', 'paused')
-                }
-              }}
-            >
-              {[...Array(2)].map((_, iteration) =>
-                technologies.map((tech, index) => (
-                  <motion.div
-                    key={`${iteration}-${index}`}
-                    className="flex-shrink-0"
-                    onHoverStart={() => setHoveredIndex(index)}
-                    onHoverEnd={() => setHoveredIndex(null)}
-                  >
-                    <motion.div
-                      className="flex flex-col items-center gap-3 px-8 py-6 rounded-lg border border-cyan-500/20 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 cursor-default"
-                      whileHover={{
-                        scale: 1.1,
-                        borderColor: 'rgba(34, 211, 238, 0.5)',
-                        boxShadow: '0 0 30px rgba(34, 211, 238, 0.3)',
-                      }}
-                    >
-                      <span className="text-3xl">{tech.icon}</span>
-                      <p className="text-sm font-semibold text-white whitespace-nowrap">{tech.name}</p>
-                      {hoveredIndex === index && (
-                        <motion.div
-                          layoutId="hover"
-                          className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      )}
-                    </motion.div>
-                  </motion.div>
-                )),
-              )}
-            </motion.div>
-          </div>
+          <LogoLoop logos={technologies} speed={40} gap={40} />
         </motion.div>
 
         {/* Grid of categories */}

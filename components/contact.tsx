@@ -252,20 +252,20 @@ export function Contact() {
           >
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Email</p>
-              <a href="mailto:contact@example.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
-                contact@example.com
+              <a href="mailto:aryanraj.tech@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
+                aryanraj.tech@gmail.com
               </a>
             </div>
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">LinkedIn</p>
-              <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
-                linkedin.com/in/yourprofile
+              <a href="https://www.linkedin.com/in/aryanraj-tech/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
+                linkedin.com/in/aryanraj-tech
               </a>
             </div>
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">GitHub</p>
-              <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
-                github.com/yourprofile
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
+                github.com/aryanraj
               </a>
             </div>
           </motion.div>

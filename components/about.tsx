@@ -68,16 +68,13 @@ export function About() {
             variants={itemVariants}
             className="text-4xl sm:text-5xl font-bold mt-2 mb-6 text-white"
           >
-            Backend-Focused Engineer
+            Aryan Raj - Backend Engineer
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-lg text-gray-400 max-w-3xl font-light leading-relaxed"
           >
-            Building production-grade microservices and scalable systems using Java, Spring Boot, Kafka,
-            Redis, and secure architecture patterns. Passionate about system-level thinking, architectural
-            clarity, and engineering excellence. Dedicated to creating robust, maintainable, and performant
-            backend solutions.
+            I'm a backend engineer passionate about designing and building scalable microservices, event-driven architectures, and robust distributed systems. With expertise in Java, Spring Boot, Kafka, and cloud technologies, I focus on creating production-grade solutions that handle complex business logic with precision. My work emphasizes secure authentication systems, efficient caching strategies, and clean architecture patterns that stand the test of time.
           </motion.p>
         </motion.div>
 
