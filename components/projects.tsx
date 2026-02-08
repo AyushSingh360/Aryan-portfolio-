@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ProjectCard } from './project-card'
+import { SpotlightCard } from './ui/spotlight-card'
+import { ExternalLink, Github } from 'lucide-react'
 
 export function Projects() {
   const ref = useRef(null)
@@ -121,9 +122,9 @@ export function Projects() {
           </motion.h2>
         </motion.div>
 
-        {/* Magic Bento Grid */}
+        {/* Aligned Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
@@ -132,9 +133,69 @@ export function Projects() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className={project.featured ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}
+              className="h-full"
             >
-              <ProjectCard {...project} />
+              <SpotlightCard
+                spotlightColor="#22d3ee30"
+                className="h-full flex flex-col p-6"
+              >
+                <div className="flex-1 flex flex-col gap-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    <div className="mb-4">
+                      <p className="text-xs font-semibold text-cyan-400 mb-2 uppercase tracking-widest">
+                        Tech Stack
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 text-xs rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-400/20"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <p className="text-xs font-semibold text-purple-400 mb-2 uppercase tracking-widest">
+                        Highlights
+                      </p>
+                      <ul className="space-y-1">
+                        {project.highlights.map((highlight, i) => (
+                          <li
+                            key={i}
+                            className="text-xs text-gray-300 flex items-start gap-2"
+                          >
+                            <span className="text-cyan-400 mt-1">▪</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 pt-4 border-t border-white/10">
+                    <button className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-400/30 transition-colors flex items-center justify-center gap-2">
+                      <ExternalLink size={16} />
+                      Live
+                    </button>
+                    <button className="flex-1 px-4 py-2 text-sm font-medium rounded-lg bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-400/30 transition-colors flex items-center justify-center gap-2">
+                      <Github size={16} />
+                      Code
+                    </button>
+                  </div>
+                </div>
+              </SpotlightCard>
             </motion.div>
           ))}
         </motion.div>
