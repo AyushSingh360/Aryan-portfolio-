@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 
 import './globals.css'
-import { AnimatedBackground } from '@/components/animated-background'
+import PixelSnow from '@/components/PixelSnow'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
@@ -34,8 +34,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.className} antialiased overflow-x-hidden bg-background`}>
-        <AnimatedBackground />
+      <body className={`${spaceGrotesk.className} antialiased overflow-x-hidden`}>
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <PixelSnow
+            color="#d2c1fb"
+            flakeSize={0.017}
+            minFlakeSize={1.25}
+            pixelResolution={500}
+            speed={0.8}
+            density={0.4}
+            direction={360}
+            brightness={1.7}
+            depthFade={8}
+            farPlane={29}
+            gamma={0.4545}
+            variant="snowflake"
+          />
+        </div>
         {children}
       </body>
     </html>

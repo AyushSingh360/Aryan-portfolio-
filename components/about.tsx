@@ -12,7 +12,7 @@ export function About() {
     { label: 'Projects Built', value: '15+' },
     { label: 'Systems Designed', value: '20+' },
     { label: 'APIs Developed', value: '50+' },
-    { label: 'Production Deployments', value: '100+' },
+    { label: 'Production Deployments', value: '10+' },
   ]
 
   const containerVariants = {

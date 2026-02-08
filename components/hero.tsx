@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Plasma } from './ui/plasma'
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -53,26 +52,36 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-20">
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-96 h-96 rounded-full"
-            style={{
-              background: `radial-gradient(circle, rgba(100, 200, 255, 0.1) 0%, transparent 70%)`,
-              filter: 'blur(40px)',
-            }}
-            animate={{
-              x: [0, 100, 0],
-              y: [0, 50, 0],
-            }}
-            transition={{
-              duration: 20 + i * 5,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-            initial={{ x: Math.random() * 500 - 250, y: Math.random() * 500 - 250 }}
-          />
-        ))}
+        {[...Array(5)].map((_, i) => {
+          // Use deterministic positions based on index to avoid hydration mismatch
+          const positions = [
+            { x: -100, y: 50 },
+            { x: 150, y: -80 },
+            { x: -50, y: 120 },
+            { x: 100, y: -30 },
+            { x: -150, y: 80 },
+          ]
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-96 h-96 rounded-full"
+              style={{
+                background: `radial-gradient(circle, rgba(100, 200, 255, 0.1) 0%, transparent 70%)`,
+                filter: 'blur(40px)',
+              }}
+              animate={{
+                x: [0, 100, 0],
+                y: [0, 50, 0],
+              }}
+              transition={{
+                duration: 20 + i * 5,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+              initial={positions[i]}
+            />
+          )
+        })}
       </div>
 
       {/* Cursor glow effect */}
@@ -146,9 +155,6 @@ export function Hero() {
           </motion.a>
         </motion.div>
       </motion.div>
-
-      {/* Plasma background */}
-      <Plasma />
     </section>
   )
 }

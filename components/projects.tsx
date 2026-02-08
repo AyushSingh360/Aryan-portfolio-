@@ -22,7 +22,7 @@ export function Projects() {
         'Role-based access control & dashboards',
         'Containerized microservices architecture',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
       featured: true,
     },
@@ -36,7 +36,7 @@ export function Projects() {
         'Asynchronous event processing',
         'Rating-based filtering algorithm',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
     },
     {
@@ -49,7 +49,7 @@ export function Projects() {
         'Modular service architecture',
         'Real-time data sync',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
     },
     {
@@ -62,7 +62,7 @@ export function Projects() {
         'Scalable REST architecture',
         'Transaction management',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
     },
     {
@@ -75,7 +75,7 @@ export function Projects() {
         'Database connection pooling',
         'Concurrent user support',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
     },
     {
@@ -88,7 +88,7 @@ export function Projects() {
         'Booking management system',
         'Payment integration ready',
       ],
-      github: 'https://github.com/aryanraj',
+      github: 'https://github.com/aryan735',
       liveLink: '#',
     },
   ]

@@ -264,8 +264,8 @@ export function Contact() {
             </div>
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">GitHub</p>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
-                github.com/aryanraj
+              <a href="https://github.com/aryan735" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
+                github.com/aryan735
               </a>
             </div>
           </motion.div>

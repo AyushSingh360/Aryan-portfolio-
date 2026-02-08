@@ -10,17 +10,17 @@ export function Footer() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/aryan735',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/aryanraj-tech/',
     },
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:contact@example.com',
+      href: 'aryanraj.dev.net@gmail.com',
     },
   ]
 
