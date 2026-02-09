@@ -10,38 +10,31 @@ export function Experience() {
 
   const timeline = [
     {
-      year: 'Present',
-      role: 'Backend Engineer & Open Source Contributor',
-      company: 'Community & Personal Projects',
+      year: 'Sep 2025 - Present',
+      role: 'Backend Engineer (AI Platform)',
+      company: 'Dhriti Enterprises (Agentic AI Platform Startup)',
+      location: 'Remotely, India',
       description:
-        'Actively building and maintaining open-source projects. Contributing to backend ecosystem with focus on scalable architectures, microservices patterns, and educational content.',
+        'Architecting scalable Go-based backend services powering multi-step agent execution workflows for an agentic AI platform.',
       achievements: [
-        'Developed QuickClinic - Full-stack hospital management system with Kafka-based notifications',
-        'Built LocalConnect - Location-based service marketplace with Redis caching and advanced filtering',
-        'Created multiple Spring Boot microservices with production-grade security and architecture',
+        'Integrated OpenAI, Gemini, & Mistral via a unified orchestration layer to enable seamless provider switching',
+        'Implemented end-to-end tracing using OpenTelemetry, reducing debugging time and providing full execution traceability for complex agent chains',
+        'Modernized internal infrastructure by migrating legacy databases and integrating Keycloak for centralized, enterprise-grade authentication',
+        'Enforced Clean Architecture using interface-driven design for long-term maintainability',
       ],
     },
     {
-      year: 'Technical Focus',
-      role: 'Microservices & Distributed Systems',
-      company: 'Expertise Development',
+      year: 'Oct 2024 - Apr 2025',
+      role: 'Software Trainee (Backend Developer Intern)',
+      company: 'Ducat India',
+      location: 'Noida, India',
       description:
-        'Deep specialization in building event-driven architectures and microservices using Spring Boot, Kafka, and cloud technologies.',
+        'Engineered production-ready features across 3+ backend projects, handling end-to-end request cycles using Java and Spring Boot.',
       achievements: [
-        'Event-driven architecture with Apache Kafka for asynchronous processing',
-        'Microservices design patterns and inter-service communication',
-        'Secure authentication systems with JWT and Spring Security',
-      ],
-    },
-    {
-      year: 'Core Skills',
-      role: 'Backend Development Stack',
-      company: 'Java & Spring Ecosystem',
-      description: 'Proficient in building production-grade backend systems with a focus on code quality, security, and scalability.',
-      achievements: [
-        'Java 8+ with Spring Boot, Spring Data, and Spring Security',
-        'Database design and optimization with MySQL and MongoDB',
-        'DevOps fundamentals: Docker, deployment pipelines, and cloud architecture',
+        'Hardened application security by implementing JWT-based authentication and granular Spring Security authorization flows',
+        'Optimized SQL query patterns, resulting in a 20% performance improvement for data-heavy operations during testing phases',
+        'Improved code quality by participating in code reviews, addressing defects, and incorporating mentor feedback to accelerate delivery timelines',
+        'Automated build and dependency management for multiple backend projects, streamlining development and deployment workflows',
       ],
     },
   ]
@@ -132,7 +125,8 @@ export function Experience() {
 
                     {/* Role and Company */}
                     <h3 className="text-2xl font-bold text-white mb-2">{item.role}</h3>
-                    <p className="text-cyan-400 font-semibold mb-4">{item.company}</p>
+                    <p className="text-cyan-400 font-semibold mb-1">{item.company}</p>
+                    <p className="text-gray-500 text-sm mb-4">{item.location}</p>
 
                     {/* Description */}
                     <p className="text-gray-400 font-light mb-4 leading-relaxed">{item.description}</p>

@@ -8,13 +8,12 @@ import PixelSnow from '@/components/PixelSnow'
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
 export const metadata: Metadata = {
-  title: 'Backend Engineer - Scalable Systems & Microservices',
-  description: 'Backend-focused engineer building production-grade microservices and scalable systems using Java, Spring Boot, Kafka, Redis, and secure architecture patterns.',
-  keywords: 'Backend Engineer, Java, Spring Boot, Microservices, APIs, Distributed Systems',
-  generator: 'v0.app',
+  title: 'Aryan Raj - Backend Engineer | Agentic AI Platform',
+  description: 'Backend Engineer specializing in Go, Java, REST APIs, and Clean Architecture. Building scalable systems with Echo and Spring Boot, with expertise in LLM Integration and Agent Workflows.',
+  keywords: 'Backend Engineer, Go, Golang, Java, Spring Boot, Echo, Microservices, APIs, LLM Integration, Agent Workflows, Agentic AI, Clean Architecture',
   openGraph: {
-    title: 'Backend Engineer Portfolio',
-    description: 'Discover projects showcasing expertise in scalable backend architecture',
+    title: 'Aryan Raj - Backend Engineer Portfolio',
+    description: 'Building scalable backend systems with Go, Java, and modern frameworks',
     type: 'website',
   },
 }

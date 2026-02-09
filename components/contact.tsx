@@ -252,8 +252,8 @@ export function Contact() {
           >
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Email</p>
-              <a href="mailto:aryanraj.tech@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
-                aryanraj.tech@gmail.com
+              <a href="mailto:aryanraj.dev.net@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-light">
+                aryanraj.dev.net@gmail.com
               </a>
             </div>
             <div>

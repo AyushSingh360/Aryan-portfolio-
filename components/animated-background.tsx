@@ -24,7 +24,7 @@ export function AnimatedBackground() {
       <motion.div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(0, 200, 255, 0.1) 0%, transparent 50%)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(240, 247, 249, 1) 0%, transparent 50%)',
         }}
         animate={{
           scale: [1, 1.1, 1],
@@ -42,9 +42,8 @@ export function AnimatedBackground() {
           key={i}
           className="absolute w-72 h-72 rounded-full mix-blend-screen"
           style={{
-            background: `radial-gradient(circle, ${
-              i % 3 === 0 ? 'rgba(34, 211, 238, 0.08)' : i % 3 === 1 ? 'rgba(168, 85, 247, 0.08)' : 'rgba(236, 72, 153, 0.08)'
-            } 0%, transparent 70%)`,
+            background: `radial-gradient(circle, ${i % 3 === 0 ? 'rgba(34, 211, 238, 0.08)' : i % 3 === 1 ? 'rgba(168, 85, 247, 0.08)' : 'rgba(236, 72, 153, 0.08)'
+              } 0%, transparent 70%)`,
             filter: 'blur(60px)',
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -72,8 +71,8 @@ export function AnimatedBackground() {
       >
         <defs>
           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgba(34, 211, 238, 0.2)" />
-            <stop offset="100%" stopColor="rgba(168, 85, 247, 0.1)" />
+            <stop offset="0%" stopColor="rgba(243, 246, 247, 1)" />
+            <stop offset="100%" stopColor="rgba(249, 246, 252, 1)" />
           </linearGradient>
         </defs>
       </motion.svg>

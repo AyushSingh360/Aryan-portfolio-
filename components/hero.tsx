@@ -129,7 +129,7 @@ export function Hero() {
           variants={itemVariants}
           className="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto font-light"
         >
-          Building production-grade microservices with Java, Spring Boot, and cloud technologies. Specialized in event-driven architectures and scalable distributed systems.
+          Specializing in <span className="text-cyan-400">Go (Golang)</span>, <span className="text-cyan-400">Java</span>, REST APIs, Concurrency, and Clean Architecture. Building scalable systems with <span className="text-cyan-400">Echo</span> and <span className="text-cyan-400">Spring Boot</span>, with expertise in LLM Integration and Agent Workflows for GenAI platforms.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -152,6 +152,15 @@ export function Hero() {
             className="px-8 py-3 glass text-cyan-400 rounded-lg font-semibold border border-cyan-500/50 transition-all hover:border-cyan-400"
           >
             Contact Me
+          </motion.a>
+          <motion.a
+            href="/Resume.pdf"
+            download="Aryan_Raj_Resume.pdf"
+            variants={buttonVariants}
+            whileHover="hover"
+            className="px-8 py-3 glass text-cyan-400 rounded-lg font-semibold border border-cyan-500/50 transition-all hover:border-cyan-400"
+          >
+            Download Resume
           </motion.a>
         </motion.div>
       </motion.div>
