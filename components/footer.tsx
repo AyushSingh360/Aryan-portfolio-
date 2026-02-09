@@ -1,7 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import {
+  Github,
+  Linkedin,
+  Mail,
+
+  Code,
+  BookOpen,
+  MessageSquare,
+  X,
+} from 'lucide-react'
+
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -16,6 +26,26 @@ export function Footer() {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/aryanraj-tech/',
+    },
+    {
+      icon: X, // or X
+      label: 'X',
+      href: 'https://x.com/aryann_dev',
+    },
+    {
+      icon: Code, // good generic icon for LeetCode
+      label: 'LeetCode',
+      href: 'https://leetcode.com/debugger_sensei/',
+    },
+    {
+      icon: BookOpen,
+      label: 'GeeksforGeeks',
+      href: 'https://auth.geeksforgeeks.org/user/aryanra4qyf',
+    },
+    {
+      icon: MessageSquare,
+      label: 'Discord',
+      href: 'https://discord.com/users/debugger_sensei',
     },
     {
       icon: Mail,

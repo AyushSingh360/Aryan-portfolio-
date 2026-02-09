@@ -4,7 +4,24 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { LogoLoop } from './ui/logo-loop'
-import { Save as Java, Leaf, Shield, AlertCircle, Zap, Database, Box, Heart as React, Key, GitBranch, Github, Server } from 'lucide-react'
+import {
+  Code2,
+  Server,
+  Cpu,
+  Workflow,
+  Database,
+  Cloud,
+  Boxes,
+  ShieldCheck,
+  Eye,
+  Network,
+  Terminal,
+  GitBranch,
+  Github,
+  Layers,
+  KeyRound
+} from "lucide-react";
+
 
 export function TechStack() {
   const ref = useRef(null)
@@ -12,18 +29,46 @@ export function TechStack() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const technologies = [
-    { name: 'Java', icon: <Java className="w-8 h-8" /> },
-    { name: 'Spring Boot', icon: <Leaf className="w-8 h-8" /> },
-    { name: 'Spring Security', icon: <Shield className="w-8 h-8" /> },
-    { name: 'Kafka', icon: <AlertCircle className="w-8 h-8" /> },
-    { name: 'Redis', icon: <Zap className="w-8 h-8" /> },
-    { name: 'MongoDB', icon: <Database className="w-8 h-8" /> },
-    { name: 'MySQL', icon: <Database className="w-8 h-8" /> },
-    { name: 'Docker', icon: <Box className="w-8 h-8" /> },
-    { name: 'React', icon: <React className="w-8 h-8" /> },
-    { name: 'JWT', icon: <Key className="w-8 h-8" /> },
-    { name: 'Git', icon: <GitBranch className="w-8 h-8" /> },
-    { name: 'GitHub', icon: <Github className="w-8 h-8" /> },
+     // --- Backend & Languages ---
+  { name: "Golang", icon: <Code2 className="w-8 h-8" /> },
+  { name: "Java", icon: <Code2 className="w-8 h-8" /> },
+
+  // --- Frameworks ---
+  { name: "Echo Framework", icon: <Server className="w-8 h-8" /> },
+  { name: "Spring Boot", icon: <Server className="w-8 h-8" /> },
+  { name: "Spring Security", icon: <ShieldCheck className="w-8 h-8" /> },
+
+  // --- APIs & Architecture ---
+  { name: "REST APIs", icon: <Network className="w-8 h-8" /> },
+  { name: "Backend Services", icon: <Terminal className="w-8 h-8" /> },
+  { name: "Microservices", icon: <Workflow className="w-8 h-8" /> },
+
+  // --- Messaging & Async ---
+  { name: "Apache Kafka", icon: <Workflow className="w-8 h-8" /> },
+
+  // --- AI & Agent Systems ---
+  { name: "AI / LLM API Integration", icon: <Cpu className="w-8 h-8" /> },
+  { name: "Agent Workflows", icon: <Workflow className="w-8 h-8" /> },
+
+  // --- Databases & Caching ---
+  { name: "PostgreSQL / MySQL", icon: <Database className="w-8 h-8" /> },
+  { name: "MongoDB", icon: <Database className="w-8 h-8" /> },
+  { name: "Redis", icon: <Layers className="w-8 h-8" /> },
+
+  // --- Auth & Security ---
+  { name: "JWT Authentication", icon: <KeyRound className="w-8 h-8" /> },
+  { name: "Authentication & Authorization", icon: <ShieldCheck className="w-8 h-8" /> },
+
+  // --- DevOps & Infra ---
+  { name: "Docker", icon: <Boxes className="w-8 h-8" /> },
+  { name: "Cloud Fundamentals", icon: <Cloud className="w-8 h-8" /> },
+
+  // --- Observability ---
+  { name: "Observability & Tracing", icon: <Eye className="w-8 h-8" /> },
+
+  // --- Version Control ---
+  { name: "Git", icon: <GitBranch className="w-8 h-8" /> },
+  { name: "GitHub", icon: <Github className="w-8 h-8" /> },
   ]
 
   const containerVariants = {
@@ -92,16 +137,32 @@ export function TechStack() {
         >
           {[
             {
-              title: 'Backend Framework',
-              techs: ['Spring Boot', 'Spring Security', 'Spring Data'],
+              title: 'Backend & Systems',
+              techs: ['Go (Golang)', 'Java', 'Microservices', 'Concurrency', 'Clean Architecture'],
+            },
+            {
+              title: 'Backend Frameworks',
+              techs: ['Echo', 'Spring Boot'],
+            },
+              {
+              title: 'GenAI / LLM Systems',
+              techs: ['LLM Integration,', 'Agent Workflows'],
+            },
+            {
+              title: 'Observability',
+              techs: ['Open Telemetry', 'Jaeger', 'Structured Logging'],
             },
             {
               title: 'Message & Cache',
-              techs: ['Kafka', 'Redis', 'RabbitMQ'],
+              techs: ['Kafka', 'Nats','Redis', 'RabbitMQ'],
             },
             {
               title: 'Databases',
               techs: ['MySQL', 'MongoDB Atlas', 'PostgreSQL'],
+            },
+            {
+              title: 'Tooling',
+              techs: ['Maven', 'Postman'],
             },
             {
               title: 'Deployment',
